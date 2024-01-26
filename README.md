@@ -74,10 +74,10 @@ InferAligner can be very effectively applied to LLaVA. In terms of inference tim
 <table style="width: 80%; margin: 0 auto">
   <tr>
     <td align="center"><img src="imgs/llava/LLaVA-7B.jpg" width="100%"/>
-        <br><em>LLaMA2-7B</em>
+        <br><em>LLaMA-7B</em>
       </td>
     <td align="center"><img src="imgs/llava/LLaVA-13B.jpg" width="100%"/>
-        <br><em>LLaMA2-13B</em>
+        <br><em>LLaMA-13B</em>
       </td>
   </tr>
 </table>
