@@ -8,7 +8,7 @@
 <img src='https://img.shields.io/badge/Data%20License-CC%20By%20NC%204.0-blue.svg'>
 </p>
 
-This  is the official repository for [&#34;InferAligner: Inference-Time Alignment for Harmlessness through Cross-Model Guidance&#34;](https://arxiv.org/abs/2401.11206).
+This is the official repository for [&#34;InferAligner: Inference-Time Alignment for Harmlessness through Cross-Model Guidance&#34;](https://arxiv.org/abs/2401.11206).
 
 ## Introduction
 
