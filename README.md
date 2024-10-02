@@ -1,4 +1,5 @@
 # InferAligner
+
 <p align="center">
 <a href='https://github.com/Jihuai-wpy/InferAligner/blob/main/LICENSE'>
 <img src='https://img.shields.io/badge/Code%20License-Apache_2.0-Green'></a> 
@@ -7,10 +8,7 @@
 <img src='https://img.shields.io/badge/Data%20License-CC%20By%20NC%204.0-blue.svg'>
 </p>
 
-
-
-
-This is the official repository for ["InferAligner: Inference-Time Alignment for Harmlessness through Cross-Model Guidance"](https://arxiv.org/abs/2401.11206).
+This  is the official repository for [&#34;InferAligner: Inference-Time Alignment for Harmlessness through Cross-Model Guidance&#34;](https://arxiv.org/abs/2401.11206).
 
 ## Introduction
 
@@ -21,7 +19,6 @@ With the rapid development of large language models (LLMs), they are not only us
     <br>
     Illustration of the inference process with and without InferAligner.
 </p>
-
 
 ## Training-Time Alignment v.s. Inference-Time Alignment
 
@@ -41,7 +38,7 @@ Therefore, we propose InferAligner, an effective inference-time alignment method
 
 ## InferAligner
 
-InferAligner is a novel inference-time alignment method that employs cross-model guidance for harmlessness alignment. We directly leverage the conversation template and take the mean activation difference of the last token between harmful and harmless prompts as safety related vectors (SRVs). Specifically, we use the SRVs extracted from the models aligned for harmlessness as safety steering vectors (SSVs). During the inference stage of the target model, for each layer $l$, we supervise the intent of input instructions based on the SRVs and calculate the guidance gate $g_l$ to precisely control the activation shift. Then we shift the activations across all token positions using safety steering vectors $\theta_l$ extracted from aligned models and the guidance gate $g_l$. 
+InferAligner is a novel inference-time alignment method that employs cross-model guidance for harmlessness alignment. We directly leverage the conversation template and take the mean activation difference of the last token between harmful and harmless prompts as safety related vectors (SRVs). Specifically, we use the SRVs extracted from the models aligned for harmlessness as safety steering vectors (SSVs). During the inference stage of the target model, for each layer $l$, we supervise the intent of input instructions based on the SRVs and calculate the guidance gate $g_l$ to precisely control the activation shift. Then we shift the activations across all token positions using safety steering vectors $\theta_l$ extracted from aligned models and the guidance gate $g_l$.
 
 The following is a schematic illustration of the computation for InferAligner. Please refer to our [paper](https://arxiv.org/abs/2401.11206) for more details.
 
@@ -84,7 +81,7 @@ InferAligner can be very effectively applied to LLaVA. In terms of inference tim
 
 ### Scalability and Adaptability of InferAligner
 
-InferAligner exhibits significant universality. In terms of scalability, InferAligner can be effectively applied to domain-specific models, regardless of whether they are fine-tuned based on LLaMA2-7B or LLaMA2-13B. Regarding adaptability, beyond the LLaMA2 series, InferAligner can also be effectively applied to the Qwen series and the InternLM series. 
+InferAligner exhibits significant universality. In terms of scalability, InferAligner can be effectively applied to domain-specific models, regardless of whether they are fine-tuned based on LLaMA2-7B or LLaMA2-13B. Regarding adaptability, beyond the LLaMA2 series, InferAligner can also be effectively applied to the Qwen series and the InternLM series.
 
 <table style="width: 80%; margin: 0 auto">
   <tr>
@@ -130,4 +127,3 @@ If you find InferAligner useful for your research and applications, please cite 
       primaryClass={cs.CL}
 }
 ```
-
